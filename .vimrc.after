@@ -1,0 +1,41 @@
+"""""""""""""""""
+" Misc settings "
+"_______________"
+set t_Co=256                    " make it shiny
+set wrap                        " wrap long lines
+set undolevels=1000             " forgivable mistakes
+set foldenable
+
+""""""""""""""
+" Set colors "
+"____________"
+colorscheme molokai
+set cursorline                  " highlight current line of the cursor
+set colorcolumn=81              " mark lines with 80+ chars (keep em short)
+
+"""""""""""""""""""""""""""""""""
+" Enable Powerline 'fancy' mode "
+"_______________________________"
+let g:Powerline_symbols = 'fancy'
+
+""""""""""""""
+" For erlang "
+"____________"
+"
+" completion
+"
+let g:erlangManPath='/usr/local/lib/erlang/man'
+let g:erlangCompletion='grep'
+let g:erlangCompletionDisplatDoc=1
+set completeopt=longest,menuone
+"
+" folding
+"
+let g:erlangFold=1
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':'1')<CR>
+vnoremap <Space> zf
+
+""""""""""""
+" Mappings "
+"__________"
+map <C-b> :CtrlPBuffer<CR>
