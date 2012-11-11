@@ -19,9 +19,10 @@ ZSH_THEME="andy"
 # Own Aliases ------------------------------------------------------------------
 alias irc="ssh andy@xray666.server4you.de -p 24"
 
-alias cip="cd /home/andy/workspace/studium/semester4/cip"
-alias sep="cd /home/andy/workspace/studium/semester4/sep"
-alias rn="cd /home/andy/workspace/studium/semester4/rn"
+# Semester dependent aliases
+alias agenten="cd /home/andy/workspace/studium/semester5/la"
+alias ai="cd /home/andy/workspace/studium/semester5/ai"
+alias vs="cd /home/andy/workspace/studium/semester5/vs"
 
 alias upg="sudo apt-get upgrade"
 alias upd="sudo apt-get update"
@@ -32,6 +33,8 @@ alias wc3="wine \"/home/andy/.wine/drive_c/Program Files/Warcraft III/Frozen Thr
 alias ffvid="LD_PRELOAD=/home/andy/Downloads/ali1234-fullscreenhack-71ad00e/libfullscreenhack.so firefox"
 
 alias la="ll -a"
+
+alias t="/home/andy/todo/todo.sh"
 #--------------------------------------------------------------------------------
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"

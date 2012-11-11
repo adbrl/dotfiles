@@ -4,8 +4,15 @@
 set t_Co=256                    " make it shiny
 set wrap                        " wrap long lines
 set undolevels=1000             " forgivable mistakes
-set foldenable
-
+filetype on                     " filetype detection on
+filetype plugin on              " load filetype specific plugins
+filetype plugin indent on       " load filetype specific indent plugins
+set foldenable                  " enable code folding
+set smarttab                    " smart tab
+set expandtab                   " spaces not tabs
+set tabstop=4                   " 4 spaces tabstop
+set softtabstop=4               " 4 spaces softtabstop
+set shiftwidth=4                " 4 spaces indent
 """"""""""""""
 " Set colors "
 "____________"
