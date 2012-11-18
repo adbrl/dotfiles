@@ -42,6 +42,12 @@ let g:erlangFold=1
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':'1')<CR>
 vnoremap <Space> zf
 
+"""""""""
+" LaTeX "
+"_______"
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+
 """"""""""""
 " Mappings "
 "__________"

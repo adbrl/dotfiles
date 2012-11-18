@@ -6,6 +6,10 @@ export ZSH=$HOME/.oh-my-zsh
 M2_HOME=/usr/local/apache-maven-3.0.4/bin
 export PATH=$PATH:$M2_HOME
 
+# Path to studium directories
+STUDIUM=$HOME/workspace/studium
+export STUDIUM=$HOME/workspace/studium
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -18,11 +22,12 @@ ZSH_THEME="andy"
 
 # Own Aliases ------------------------------------------------------------------
 alias irc="ssh andy@xray666.server4you.de -p 24"
+alias violet="java -jar /home/andy/local/violetUML/violet-0.21.1.jar"
 
 # Semester dependent aliases
-alias agenten="cd /home/andy/workspace/studium/semester5/la"
-alias ai="cd /home/andy/workspace/studium/semester5/ai"
-alias vs="cd /home/andy/workspace/studium/semester5/vs"
+alias agenten="cd $STUDIUM/semester5/la"
+alias ai="cd $STUDIUM/semester5/ai"
+alias vs="cd $STUDIUM/semester5/vs"
 
 alias upg="sudo apt-get upgrade"
 alias upd="sudo apt-get update"
