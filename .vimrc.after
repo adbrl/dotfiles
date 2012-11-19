@@ -13,6 +13,8 @@ set expandtab                   " spaces not tabs
 set tabstop=4                   " 4 spaces tabstop
 set softtabstop=4               " 4 spaces softtabstop
 set shiftwidth=4                " 4 spaces indent
+syntax on
+
 """"""""""""""
 " Set colors "
 "____________"
@@ -25,22 +27,27 @@ set colorcolumn=81              " mark lines with 80+ chars (keep em short)
 "_______________________________"
 let g:Powerline_symbols = 'fancy'
 
-""""""""""""""
-" For erlang "
-"____________"
+""""""""""
+" Erlang "
+"________"
 "
 " completion
-"
 let g:erlangManPath='/usr/local/lib/erlang/man'
 let g:erlangCompletion='grep'
 let g:erlangCompletionDisplatDoc=1
 set completeopt=longest,menuone
 "
 " folding
-"
 let g:erlangFold=1
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':'1')<CR>
 vnoremap <Space> zf
+
+""""""""""
+" Python "
+"________"
+"
+" recognizing *.py as python-file
+au BufNewFile,BufReadPost *.py set filetype=python
 
 """""""""
 " LaTeX "
@@ -51,4 +58,6 @@ let g:Tex_DefaultTargetFormat='pdf'
 """"""""""""
 " Mappings "
 "__________"
+"
+" Mapping :CtrlPBuffer to C-b
 map <C-b> :CtrlPBuffer<CR>
