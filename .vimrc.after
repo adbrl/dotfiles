@@ -7,7 +7,11 @@ set undolevels=1000             " forgivable mistakes
 filetype on                     " filetype detection on
 filetype plugin on              " load filetype specific plugins
 filetype plugin indent on       " load filetype specific indent plugins
-set foldenable                  " enable code folding
+
+" following lines not needed because of erlang folding
+"set foldenable                  " enable code folding
+"set foldmethod=indent           " setting foldmethod
+"set foldnestmax=1               " set maximum depth of folding (i hate nested folding)
 set smarttab                    " smart tab
 set expandtab                   " spaces not tabs
 set tabstop=4                   " 4 spaces tabstop
@@ -32,13 +36,14 @@ let g:Powerline_symbols = 'fancy'
 "________"
 "
 " completion
-let g:erlangManPath='/usr/local/lib/erlang/man'
+let g:erlangManPath='/usr/local/lib/erlang/man' " path of erlang manual for completion purposes
 let g:erlangCompletion='grep'
 let g:erlangCompletionDisplatDoc=1
 set completeopt=longest,menuone
 "
 " folding
-let g:erlangFold=1
+let g:erlang_folding=1                                      "NOT let g:erlangFold=1
+" map space to za in silent mode
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':'1')<CR>
 vnoremap <Space> zf
 
