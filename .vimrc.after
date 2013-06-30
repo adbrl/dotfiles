@@ -7,6 +7,7 @@ set undolevels=1000             " forgivable mistakes
 filetype on                     " filetype detection on
 filetype plugin on              " load filetype specific plugins
 filetype plugin indent on       " load filetype specific indent plugins
+set pastetoggle=<F2>            " toggle auto indnting when pasting text
 
 " following lines not needed because of erlang folding
 "set foldenable                  " enable code folding
@@ -19,6 +20,7 @@ set softtabstop=4               " 4 spaces softtabstop
 set shiftwidth=4                " 4 spaces indent
 syntax on
 
+autocmd VimEnter * nested :TagbarOpen
 """"""""""""""
 " Set colors "
 "____________"
@@ -47,16 +49,20 @@ let g:erlang_folding=1                                      "NOT let g:erlangFol
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':'1')<CR>
 vnoremap <Space> zf
 
+" NERDTree Ignore BEAM Files
+let NERDTreeIgnore = ['\.beam$']
 """"""""""
 " Python "
 "________"
 "
 " recognizing *.py as python-file
 au BufNewFile,BufReadPost *.py set filetype=python
+au BufNewFile,BufReadPost *.pl set filetype=prolog
 
 """""""""
 " LaTeX "
 "_______"
+set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 
